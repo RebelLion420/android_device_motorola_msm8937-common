@@ -20,8 +20,8 @@ TARGET_RECOVERY_DEVICE_DIRS := \
     $(COMMON_PATH) \
     $(DEVICE_PATH)
 
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+#TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
+#TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 # Arch
 TARGET_CPU_VARIANT := cortex-a53
@@ -84,7 +84,8 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 # TWRP
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TW_EXTRA_LANGUAGES := true
+TW_EXTRA_LANGUAGES := false
+TW_USE_TOOLBOX := true
 TW_NEW_ION_HEAP := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_SCREEN_BLANK_ON_BOOT := true

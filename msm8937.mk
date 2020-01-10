@@ -18,7 +18,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -34,5 +34,5 @@ PRODUCT_PACKAGES += \
     libcryptfs_hw
 
 # Time Zone data
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
